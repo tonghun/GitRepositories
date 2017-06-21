@@ -1,4 +1,4 @@
-package com.javase.abstractClass;
+package com.javase.classtest;
 
 /**
  * 1.�������мȿ����г��󷽷���û�з����壩��Ҳ�����о��巽���� 2.�������еĳ��󷽷�������ʡ��abstract��

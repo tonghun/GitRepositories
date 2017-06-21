@@ -1,4 +1,4 @@
-package com.javase.access;
+package com.javase.classtest;
 
 /**
  * ˽�б���������ͨ������+�������ķ�ʽ��ʽ������ͨ����������

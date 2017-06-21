@@ -1,4 +1,4 @@
-package com.javase.stringTest;
+package com.javase.string;
 
 /**
  * ��˫�����ڲ�ʹ��˫���ţ�����Ϊÿһ���ڲ���˫�������ת���ַ���\����
