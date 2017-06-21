@@ -21,6 +21,9 @@ public class InetAddressTest {
 			System.out.println("x=" + x);
 		}
 		System.out.println("hostName=" + localHost.getHostName());
+
+		InetAddress ip = InetAddress.getByName("www.baidu.com");
+		System.out.println("ip=" + ip);
 	}
 
 }
