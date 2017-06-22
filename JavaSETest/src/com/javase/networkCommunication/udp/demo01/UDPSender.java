@@ -1,4 +1,4 @@
-package com.javase.networkCommunication.udp;
+package com.javase.networkCommunication.udp.demo01;
 
 import java.io.BufferedReader;
 import java.io.IOException;

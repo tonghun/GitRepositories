@@ -1,4 +1,4 @@
-package com.javase.networkCommunication.udp;
+package com.javase.networkCommunication.udp.demo01;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
