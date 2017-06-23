@@ -2,12 +2,6 @@ package com.javase.regex;
 
 import java.io.File;
 
-/**
- * ����Scanner���Կ��ٵش��ַ�������ȡ��Ҫ������
- * 
- * @author tonghuo
- *
- */
 public class Scanner {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
@@ -23,8 +17,8 @@ public class Scanner {
 			System.out.println("ifִ��");
 		}
 		System.out.println("res��:" + res);
-		
-		System.out.println("File.separator----"+File.separator);
+
+		System.out.println("File.separator----" + File.separator);
 	}
 
 }
