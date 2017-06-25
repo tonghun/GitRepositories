@@ -9,6 +9,7 @@ package com.javase.classtest;
  * @author tonghuo
  *
  */
+@SuppressWarnings("unused")
 public class FinalClassTest {
 
 	private final User user02;
@@ -22,7 +23,6 @@ public class FinalClassTest {
 	/* public void init(User user){
 	   this.user02=user;
 	 }*/
-	@SuppressWarnings("unused")
 	private static final int a = 3;
 
 	private static final User user01 = new User();
