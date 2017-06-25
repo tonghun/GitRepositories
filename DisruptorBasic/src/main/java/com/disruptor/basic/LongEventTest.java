@@ -46,7 +46,7 @@ public class LongEventTest {
 		executor.shutdown();
 	}
 
-	@Test
+	/*@Test
 	public void test02() {
 		long startTime = System.currentTimeMillis();
 		for (long a = 0; a < 100; a++) {
@@ -54,6 +54,6 @@ public class LongEventTest {
 		}
 		long endTime = System.currentTimeMillis();
 		System.out.println("useTime=" + (endTime - startTime));
-	}
+	}*/
 
 }
