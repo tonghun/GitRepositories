@@ -6,7 +6,7 @@ import java.io.RandomAccessFile;
 import org.junit.Test;
 
 /**
- * 1.RandomAccessFile是一个文件对象，既可以读，也可以写，还可以根据指针随机访问文件内容。
+ * 1.RandomAccessFile是一个文件操作对象，既可以读，也可以写，还可以根据指针随机访问文件内容。
  * 2.几个重要的概念：文件指针是当前光标所在位置，读写操作开始的地方。seek可以设定指针位置。
  * 
  * @author tonghuo

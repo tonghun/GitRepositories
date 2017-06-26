@@ -1,11 +1,5 @@
 package com.javase.classtest;
 
-/**
- * ˽�б���������ͨ������+�������ķ�ʽ��ʽ������ͨ����������
- * 
- * @author tonghuo
- *
- */
 public class PrivateRight {
 	public static void main(String[] args) {
 		PrivateModel p = new PrivateModel();
