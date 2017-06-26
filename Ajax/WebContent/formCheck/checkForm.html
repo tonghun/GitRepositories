@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>使用Ajax验证表单输入</title>
+<script>
+	var checkName = function() {
+		var name = document.getElementById("name").value;
+		var xmlHttp;
+		if (window.XMLHttpRequest)
+			xmlHttp = new XMLHttpRequest();
+		else
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+		xmlHttp.onreadystatechange = function() {
+			if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+				var tip = document.getElementById("tip");
+				var result = xmlHttp.responseText;
+				if (result == "false") {
+					tip.innerHTML = "用户名已存在";
+				} else
+					tip.innerHTML = "";
+			}
+		};
+
+		xmlHttp.open("POST", "http://localhost:8080/Ajax/checkFormServlet");
+		xmlHttp.setRequestHeader("Content-Type",
+				"application/x-www-form-urlencoded");
+		xmlHttp.send("name=" + name);
+	}
+</script>
+</head>
+<body>
+	<div style="text-align: center">
+		<form action="http://localhost:8080/Ajax/xxxxx"
+			method="post">
+			<input type="text" name="name" onblur="checkName()" id="name">
+			<span id="tip"></span> 
+			<br>
+			<input type="submit" value="提交">
+		</form>
+	</div>
+</body>
+</html>

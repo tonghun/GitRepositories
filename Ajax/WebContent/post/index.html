@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax使用POST请求</title>
+<script>
+	var loadInfo = function() {
+		var xmlHttp;
+		if (window.XMLHttpRequest)
+			xmlHttp = new XMLHttpRequest();
+		else
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+		xmlHttp.onreadystatechange = function() {
+			if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+				var node = document.getElementById("responseContent");
+				node.innerHTML = xmlHttp.responseText;
+			}
+		};
+
+		xmlHttp.open("POST", "http://localhost:8080/Ajax/postServlet");
+		xmlHttp.setRequestHeader("Content-Type",
+				"application/x-www-form-urlencoded");
+		xmlHttp.send("name=chen");
+	}
+</script>
+</head>
+<body>
+	<button type="button" onclick="loadInfo()">使用POST进行Ajax请求</button>
+	<span id="responseContent" style="color: red;"></span>
+</body>
+</html>

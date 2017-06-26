@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery对Ajax进行了封装了，简化了Ajax操作</title>
+<script src="../Files/jquery-3.2.1.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#button").click(function() {
+			$("#tip").load("http://localhost:8080/Ajax/getServlet");
+		});
+	});
+</script>
+</head>
+<body>
+	<button type="button" id="button">点击，利用Ajax技术从服务器端加载内容</button>
+	<span id="tip"></span>
+</body>
+</html>

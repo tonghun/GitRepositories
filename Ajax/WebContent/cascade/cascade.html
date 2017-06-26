@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>使用Ajax级联操作</title>
+<script>
+	var loadCities = function() {
+		var province = document.getElementById("province").value;
+		var xmlHttp;
+		if (window.XMLHttpRequest)
+			xmlHttp = new XMLHttpRequest();
+		else
+			xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+		xmlHttp.onreadystatechange = function() {
+			if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+				var cities = document.getElementById("cities");
+				var cityArr= xmlHttp.responseText.split(",");
+				cities.length=0;//加载前先清空，避免后加载的项目比前面的项目少，前面的项目未被完全覆盖，部分残留
+				for(i=0;i<cityArr.length;i++){
+					cities.options[i]=new Option(cityArr[i],cityArr[i]);
+				}
+			}
+		};
+
+		xmlHttp.open("GET", "http://localhost:8080/Ajax/cascadeServlet?province="+province);
+		xmlHttp.send();
+	}
+</script>
+</head>
+<body onload="loadCities()">
+	<div style="text-align: center">
+		省份<select id="province" onchange="loadCities()">
+		           <option value="zhejiang">浙江</option>
+		           <option value="henan" >河南</option>
+		      </select>
+		  &nbsp;&nbsp;
+		城市<select id="cities" ></select>
+	</div>
+</body>
+</html>
