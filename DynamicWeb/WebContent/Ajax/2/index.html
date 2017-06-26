@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax初步测试</title>
+<script>
+	var http_request;
+
+	function handler() {
+		var text = document.getElementById("text01");
+		var content = text.value;
+
+		if (window.XMLHttpRequest) {
+			http_request = new XMLHttpRequest();
+		} else {
+			http_request = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		http_request.onreadystatechange = deal;
+		http_request.open("GET",
+				"http://localhost:8080/DynamicWeb/Ajax/2/test.txt?nocache="
+						+ new Date().getTime() + "&param=" + content, true);
+		http_request.send(null);
+	}
+
+	function deal() {
+		if (http_request.readyState == 4 && http_request.status == 200) {
+			var span01 = document.getElementById("span01");
+			var res = http_request.responseText;
+			span01.innerHTML = res;
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="text01" name="text01">
+	<button type="button" onclick="handler()">处理</button>
+	<br> 处理结果（加长）：
+	<span id="span01"></span>
+	<br>
+	<form action="http://localhost:8080/DynamicWeb/Ajax/2/test.txt">
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>

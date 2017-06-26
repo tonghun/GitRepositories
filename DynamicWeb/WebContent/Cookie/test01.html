@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Cookie的有效时长</title>
+<base href="http://localhost:8080/DynamicWeb/">
+</head>
+<body>
+	<a href="addCookieServlet">生成Cookie</a>
+	<br>
+	<a href="getCookieServlet">获取Cookie</a>
+	<ol>
+		<li>浏览器只在访问绑定路径的子路径时，向服务器发送Cookie对象，并且该Cookie对象只在子路径下可见；</li>
+		<li>当未使用setPath方法为Cookie指定路径时，通过getPath无法获取Cookie的绑定路径，返回null，不代表Cookie不存在绑定路径，只是不能获取；</li>
+		<li>Cookie对象默认保存在浏览器缓存当中，浏览器关闭之后，Cookie对象销毁，要将Cookie对象保存在本地硬盘中，必须为Cookie设定有效时长，setMaxAge(int
+			time)：
+			<ol>
+				<li>time=0:缓存与硬盘中的Cookie对象被立即销毁;</li>
+				<li>time&lt;0:Cookie对象被保存到本地硬盘中，超过有效时长，Cookie对象被销毁；</li>
+				<li>time&gt;0:只保存在浏览器缓存中。</li>
+			</ol>
+		</li>
+	</ol>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<placard>
+	<description>description</description>
+	<createTime>createTime</createTime>
+	
+	
+	<info id="5">
+		<title>title05</title>
+		<content>the value of title05</content>
+		<pubDate>2017-03-22-09-32-</pubDate>
+	</info>
+</placard>

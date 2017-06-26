@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rootName>
+  <!--根节点注释-->
+  <node01>node01节点的内容
+    <!--node01的注释-->
+    <node0101>这是节点node0101</node0101>
+  </node01>
+  <node02>node02节点的内容</node02>
+  <node03>node03节点的内容</node03>
+</rootName>

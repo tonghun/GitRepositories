@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<root description="根节点"> 
+  <name02 id="1" attr001="修改后的属性值" 属性z="属性值" 属性z1="属性值">
+    <!--子节点node01的注释-->节点新增内容
+  </name02>  
+  <idCard id="1"><![CDATA[沙发上 ]]></idCard>  
+  <name02 id="2" attr001="修改后的属性值" 属性z="属性值" 属性z1="属性值">
+    <!--子节点node01的注释-->节点新增内容
+  </name02>  
+  <idCard id="2"><![CDATA[沙发上 ]]></idCard>  
+  <name02 id="3" attr001="修改后的属性值" 属性z="属性值" 属性z1="属性值">
+    <!--子节点node01的注释-->节点新增内容
+  </name02>  
+  <idCard id="3"><![CDATA[沙发上 ]]></idCard>  
+  <name02 id="4" attr001="修改后的属性值" 属性z="属性值" 属性z1="属性值">
+    <!--子节点node01的注释-->节点新增内容
+  </name02>  
+  <idCard id="4"><![CDATA[沙发上 ]]></idCard> 
+</root>

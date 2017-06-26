@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.Book" table="tb_books">
+		<cache usage="read-only" />
+		<id name="id" column="id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="name" type="string" not-null="true">
+			<column name="name" />
+		</property>
+		<property name="price" type="double">
+			<column name="price" />
+		</property>
+		<property name="bookCount" type="int">
+			<column name="bookCount" />
+		</property>
+		<property name="author" type="string">
+			<column name="author" />
+		</property>
+	</class>
+</hibernate-mapping>

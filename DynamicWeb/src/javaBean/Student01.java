@@ -1,0 +1,29 @@
+package javaBean;
+
+public class Student01 {
+	public Student01() {
+
+	}
+
+	private String name = "ÏþÃ÷";
+	private int age = 14;
+	private String sex = "ÄÐ";
+	private String homeAdd = "ÖÐ¹ú";
+
+	public String getName() {
+		return name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public String getHomeAdd() {
+		return homeAdd;
+	}
+
+}
