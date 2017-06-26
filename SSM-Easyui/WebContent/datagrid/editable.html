@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../Files/easyui.css">
+<link rel="stylesheet" type="text/css" href="../Files/icon.css">
+<link rel="stylesheet" type="text/css" href="../Files/demo.css">
+<script type="text/javascript" src="../Files/jquery.min.js"></script>
+<script type="text/javascript" src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../Files/jquery.edatagrid.js"></script>
+<script>
+    $(function(){
+    	$("#tb").edatagrid({
+    		url: '../find.do',
+			saveUrl: '../add.do',
+			updateUrl: '../edit.do',
+			destroyUrl: '../delete.do'
+    	})
+    })
+</script>
+</head>
+<body>
+	<h2>以可编辑数据表格显示从数据库中读取的数据</h2>
+	<div style="margin: 5px 0 20px">双击行开始编辑</div>
+	<table id="tb" pagination="true" rownumbers="true" idField="id" fitColumns="true"
+		toolbar="#toolbar" singleSelect="true"style="width: 700px; height: 250px;">
+		<thead>
+			<tr>
+				<th field="firstname" width="50" editor="{type:'validatebox',options:{required:true}}">First Name</th>
+				<th field="lastname" width="50"editor="{type:'validatebox',options:{required:true}}">Last name</th>
+				<th field="phone" width="50"editor="{type:'validatebox',options:{required:true}}">Phone</th>
+				<th field="email" width="50"editor="{type:'validatebox',options:{required:true,validType:'email'}}">Email</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="toolbar">
+		<a href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-add"
+			onclick="$('#tb').edatagrid('addRow')">增加</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-remove"
+			onclick="$('#tb').edatagrid('destroyRow')">删除</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-save"
+			onclick="$('#tb').edatagrid('saveRow')">保存</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-undo"
+			onclick="$('#tb').edatagrid('cancelRow')">撤销</a>
+	</div>
+</body>
+</html>
