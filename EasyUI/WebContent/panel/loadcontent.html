@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>使面板的宽度随父容器大小的变化而变化</title>
+<link href="../Files/easyui.css" rel="stylesheet" type="text/css">
+<link href="../Files/icon.css" rel="stylesheet" type="text/css">
+<link href="../Files/demo.css" rel="stylesheet" type="text/css">
+<script src="../Files/jquery.min.js"></script>
+<script src="../Files/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>面板的基本用法</h2>
+	<p>演示easyui中面板的基本用法，面板是一个容器，可以装下其他元素或者容器</p>
+	<div id="div01" class="easyui-panel" style="width: 500px; height: 300px;" title="myPanel"
+		data-options="
+		            tools:[{
+		                      iconCls:'icon-reload',
+		                      handler:function(){
+						            $('#div01').panel('refresh', 'content.html');
+					             }
+		                      }]">
+	</div>
+</body>
+</html>

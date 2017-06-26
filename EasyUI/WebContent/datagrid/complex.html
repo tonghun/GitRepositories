@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../Files/easyui.css">
+<link rel="stylesheet" type="text/css" href="../Files/icon.css">
+<link rel="stylesheet" type="text/css" href="../Files/demo.css">
+<script type="text/javascript" src="../Files/jquery.min.js"></script>
+<script type="text/javascript" src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../Files/easyui-lang-zh_CN.js"></script>
+</head>
+<body>
+	<table id="tb" class="easyui-datagrid" style="width: 700px; height: 360px;" singleSelect="true"
+		rownumbers="true" pagination="true" toolbar="#toolbar" fitColumns="true" url="../find.do"title="显示数据">
+		<thead>
+			<tr>
+				<th field="firstname" width="50">First name</th>
+				<th field="lastname" width="50">Last name</th>
+				<th field="phone" width="50">phone</th>
+				<th field="email" width="50">email</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="toolbar">
+		<a href="javascript:void(0)" class="easyui-linkbutton" plain="true"iconCls="icon-add">增加</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" plain="true"iconCls="icon-edit">修改</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" plain="true"iconCls="icon-remove">删除</a>
+	</div>
+	<div id="dlg"class="easyui-dialog"data-options="buttons:'#buttons'"style="width:400px;height:280px;padding:10px 20px"></div>
+	<div id="buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" plain="true"iconCls="icon-ok">保存</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" plain="true"iconCls="icon-no"onclick="$('#dlg').dialog('close')">取消</a>
+	</div>
+</body>
+</html>

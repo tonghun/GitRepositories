@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>panel面板的基本用法</title>
+<link href="../Files/easyui.css" rel="stylesheet" type="text/css">
+<link href="../Files/icon.css" rel="stylesheet" type="text/css">
+<link href="../Files/demo.css" rel="stylesheet" type="text/css">
+<script src="../Files/jquery.min.js"></script>
+<script src="../Files/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>面板的基本用法</h2>
+	<p>演示easyui中面板的基本用法，面板是一个容器，可以装下其他元素或者容器</p>
+	<div style="margin: 20px 0 10px 0">
+		<a href="javascript:void(0)" class="easyui-linkbutton"onclick="$('#div01').panel('open')"title="123">打开</a> 
+		<a href="javascript:void(0)"class="easyui-linkbutton" onclick="javascript:$('#div01').panel('close')">关闭</a>
+		<a href="javascript:void(0)"class="easyui-linkbutton" onclick="javascript:$('#div01').panel('expand',true)">扩展</a>
+		<a href="javascript:void(0)"class="easyui-linkbutton" onclick="javascript:$('#div01').panel('collapse',true)">收缩</a>
+	</div>
+  <div class="easyui-panel" style="width: 900px; height: 300px;">
+	<div id="div01"class="easyui-panel" style="width: 500px; height: 300px;"
+		title="myPanel">
+		<p style="font-size:14px">jQuery EasyUI framework helps you build your web pages easily.</p>
+			<ul>
+				<li>easyui is a collection of user-interface plugin based on jQuery.</li>
+				<li>easyui provides essential functionality for building modem, interactive, javascript applications.</li>
+				<li>using easyui you don't need to write many javascript code, you usually defines user-interface by writing some HTML markup.</li>
+				<li>complete framework for HTML5 web page.</li>
+				<li>easyui save your time and scales while developing your products.</li>
+				<li>easyui is very easy but powerful.</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

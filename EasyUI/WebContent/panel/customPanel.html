@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>在插件头部增加控件</title>
+<link href="../Files/easyui.css" rel="stylesheet" type="text/css">
+<link href="../Files/icon.css" rel="stylesheet" type="text/css">
+<link href="../Files/demo.css" rel="stylesheet" type="text/css">
+<script src="../Files/jquery.min.js"></script>
+<script src="../Files/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>面板的基本用法</h2>
+	<p>在面板头上添加控件</p>
+	<div class="easyui-panel" style="width: 900px; height: 300px;" title="customPanel"
+		data-options="footer:'#footer',tools:'#tt'"></div>
+	<div id="tt">
+		<a href="javascript:void(0)" class="icon-add" onclick="alert('add')"></a>
+		<a href="javascript:void(0)" class="icon-edit" onclick="alert('edit')"></a>
+		<a href="javascript:void(0)" class="icon-help" onclick="alert('help')"></a>
+		<a href="javascript:void(0)" class="icon-cut" onclick="alert('cut')"></a>
+	</div>
+	<div id="footer"style="padding:10px">Footer Content</div>
+</body>
+</html>

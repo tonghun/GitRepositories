@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>交互式信息框</title>
+<link href="../Files/easyui.css" rel="stylesheet" type="text/css">
+<link href="../Files/icon.css" rel="stylesheet" type="text/css">
+<link href="../Files/demo.css" rel="stylesheet" type="text/css">
+<script src="../Files/jquery.min.js"></script>
+<script src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+	function confirm01() {
+		$.messager.confirm("confirm", "交互信息", function(r) {
+			if (r) {
+				alert(r);
+			}
+		})
+	}
+	
+	function prompt01() {
+		$.messager.prompt("prompt", "交互信息", function(r) {
+			if (r) {
+				alert(r);
+			}
+		})
+	}
+</script>
+</head>
+<body>
+	<div style="margin: 20px 0">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="confirm01()">Alert</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="prompt01()">Info</a>
+	</div>
+</body>
+</html>

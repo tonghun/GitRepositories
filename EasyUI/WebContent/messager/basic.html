@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>消息对话框的基本用法</title>
+<link href="../Files/easyui.css" rel="stylesheet" type="text/css">
+<link href="../Files/icon.css" rel="stylesheet" type="text/css">
+<link href="../Files/demo.css" rel="stylesheet" type="text/css">
+<script src="../Files/jquery.min.js"></script>
+<script src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+	function show() {
+		$.messager.show({
+			title : 'My Title',
+			msg : 'Message will be closed after 4 seconds.',
+			showType : 'show'
+		});
+	}
+
+	function slid() {
+		$.messager.show({
+			title : "show",
+			msg : '4秒后关闭',
+			timeout : 5000,
+			showType : 'slide'
+		})
+	}
+
+	function fade() {
+		$.messager.show({
+			title : "show",
+			msg : '4秒后关闭',
+			showType : 'fade'
+		})
+	}
+
+	function progress() {
+		$.messager.progress({
+			title : "进度条",
+			msg : 'Loading data',
+		});
+		setTimeout(function() {
+			$.messager.progress('close');
+		}, 5000)
+	}
+</script>
+</head>
+<body>
+	<div style="margin: 20px 0">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="show()">show</a> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="slid()">slid</a> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="fade()">fade</a> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="progress()">progress</a>
+	</div>
+</body>
+</html>

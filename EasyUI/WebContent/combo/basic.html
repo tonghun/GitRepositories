@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>消息对话框的基本用法</title>
+<link rel="stylesheet" type="text/css" href="../Files/easyui.css">
+<link rel="stylesheet" type="text/css" href="../Files/icon.css">
+<link rel="stylesheet" type="text/css" href="../Files/demo.css">
+<script type="text/javascript" src="../Files/jquery.min.js"></script>
+<script type="text/javascript" src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../Files/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#sp").appendTo($("#cb").combo("panel"));
+		$("#sp input").click(function(){
+			var val=$(this).val();
+			var s=$(this).next("span").text();
+			$("#cb").combo("setValue",val).combo("setText",s).combo("hidePanel");
+		});
+	})
+</script>
+</head>
+<body>
+   <div id="sp">
+		<div style="line-height:22px;background:#fafafa;padding:5px;">Select a language</div>
+		<div style="padding:10px">
+			<input type="radio" name="lang" value="01"><span>Java</span><br/>
+			<input type="radio" name="lang" value="02"><span>C#</span><br/>
+			<input type="radio" name="lang" value="03"><span>Ruby</span><br/>
+			<input type="radio" name="lang" value="04"><span>Basic</span><br/>
+			<input type="radio" name="lang" value="05"><span>Fortran</span>
+		</div>
+	</div>
+	<div class="easyui-panel" style="width: 500px; height: 300px; padding: 30px 60px">
+		<div style="margin-bottom: 20px">
+			<input id="cb"class="easyui-combo" label="Start Date" labelPosition="top" style="width: 100%">
+		</div>
+	</div>
+</body>
+</html>

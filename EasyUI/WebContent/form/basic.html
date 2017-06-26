@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>日期时间框</title>
+<link rel="stylesheet" type="text/css" href="../Files/easyui.css">
+<link rel="stylesheet" type="text/css" href="../Files/icon.css">
+<link rel="stylesheet" type="text/css" href="../Files/demo.css">
+<script type="text/javascript" src="../Files/jquery.min.js"></script>
+<script type="text/javascript" src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../Files/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript"></script>
+<style>
+.fitem {
+	margin-bottom: 20px
+}
+
+.fitem label {
+   font-size:15px;
+	display: inline-block;
+	width: 80px;
+}
+</style>
+<script>
+   function formSubmit(){
+	   alert(111);
+	   $('#fm').form('submit',{
+		   url:'/formServlet',
+		   success:function(){
+			   window.location.href="http://www.baidu.com";
+		   }
+	   });
+   }
+
+</script>
+</head>
+<body>
+	<div id="panel" class="easyui-panel" style="width: 500px; height: 300px; padding: 30px 110px;"
+		title="表单">
+		<form id="fm">
+			<div class="fitem">
+				<label>姓名:</label> 
+				<input class="easyui-textbox" name="name"required="true">
+			</div>
+			<div class="fitem">
+				<label>密码:</label> 
+				<input class="easyui-passwordbox" name="password"validType="length[3,9]"required="true">
+			</div>
+			<div class="fitem">
+				<label>出生地址:</label> 
+				<input class="easyui-textbox" name="addr"required="true">
+			</div>
+			<!-- <div class="fitem">
+				<label>邮件:</label> 
+				<input class="easyui-textbox" name="email"validType="email"required="true">
+			</div> -->
+			<input type="submit"value="提交">
+		</form>
+		<div style="margin:20px;text-align:center;">
+		    <a class="easyui-linkbutton"iconCls="icon-ok"onclick="formSubmit()">提交</a>
+		    <a href="javascript:void(0)"class="easyui-linkbutton"iconCls="icon-clear"onclick="$('#fm').form('clear')">重置</a>
+		</div>
+	</div>
+</body>
+</html>

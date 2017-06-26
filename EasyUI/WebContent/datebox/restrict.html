@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>消息对话框的基本用法</title>
+<link rel="stylesheet" type="text/css" href="../Files/easyui.css">
+<link rel="stylesheet" type="text/css" href="../Files/icon.css">
+<link rel="stylesheet" type="text/css" href="../Files/demo.css">
+<script type="text/javascript" src="../Files/jquery.min.js"></script>
+<script type="text/javascript" src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../Files/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#db').datebox().datebox('calendar').calendar(
+				{
+					validator : function(date) {
+						var now = new Date();
+						alert(now);
+						var d1 = new Date(now.getFullYear(), now.getMonth(),
+								now.getDate());
+						var d2 = new Date(now.getFullYear(), now.getMonth(),
+								now.getDate() + 10);
+						return d1 <= date && date <= d2;
+					}
+				});
+	});
+</script>
+</head>
+<body>
+	<h1>限定可选日期</h1>
+	<div style="margin: 10px"></div>
+	<div class="easyui-panel" style="width: 500px; height: 300px; padding: 30px">
+		<div style="margin-bottom: 30px">
+			<input id="db" class="easyui-datebox" style="width: 100%" label='Default Date'
+				labelPosition="top"required>
+		</div>
+	</div>
+</body>
+</html>

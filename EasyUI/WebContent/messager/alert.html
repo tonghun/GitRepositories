@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>消息对话框的基本用法</title>
+<link href="../Files/easyui.css" rel="stylesheet" type="text/css">
+<link href="../Files/icon.css" rel="stylesheet" type="text/css">
+<link href="../Files/demo.css" rel="stylesheet" type="text/css">
+<script src="../Files/jquery.min.js"></script>
+<script src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+	function alert01() {
+		$.messager.alert("alert","普通消息对话框");
+	}
+	function alert02() {
+		$.messager.alert("info","普通消息对话框","info");
+	}
+	function alert03() {
+		$.messager.alert("question","普通消息对话框","question");
+	}
+	function alert04() {
+		$.messager.alert("warn","普通消息对话框","warn");
+	}
+	function alert05() {
+		$.messager.alert("error","普通消息对话框","error");
+	}
+</script>
+</head>
+<body>
+	<div style="margin: 20px 0">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="alert01()">Alert</a> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="alert02()">Info</a> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="alert03()">Question</a> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="alert04()">Warn</a> 
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="alert05()">Error</a> 
+	</div>
+</body>
+</html>

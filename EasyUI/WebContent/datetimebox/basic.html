@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>日期时间框</title>
+<link rel="stylesheet" type="text/css" href="../Files/easyui.css">
+<link rel="stylesheet" type="text/css" href="../Files/icon.css">
+<link rel="stylesheet" type="text/css" href="../Files/demo.css">
+<script type="text/javascript" src="../Files/jquery.min.js"></script>
+<script type="text/javascript" src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../Files/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	/* function showSecondsOrNot() {
+		var result = $(this).is(":checked");
+		alert(result);
+		$('#dtb').datetimebox({
+			showSeconds : result
+		});
+	} */
+	$(function() {
+		$("#c").change(function() {
+			var result = $(this).is(":checked");
+			alert(result);
+			$('#dtb').datetimebox({
+				showSeconds : result
+			});
+		})
+	})
+</script>
+</head>
+<body>
+	<div style="margin: 20px">
+		<span>Show Seconds</span> <input type="checkbox" id="c">
+	</div>
+	<div class="easyui-panel" style="width: 500px; height: 300px; padding: 30px 60px">
+		<div style="margin-bottom: 20px">
+			<input id="dtb" class="easyui-datetimebox" label="Start Date" labelPosition="top"
+				style="width: 100%">
+		</div>
+	</div>
+</body>
+</html>

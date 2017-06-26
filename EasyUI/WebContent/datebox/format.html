@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>消息对话框的基本用法</title>
+<link rel="stylesheet" type="text/css" href="../Files/easyui.css">
+<link rel="stylesheet" type="text/css" href="../Files/icon.css">
+<link rel="stylesheet" type="text/css" href="../Files/demo.css">
+<script type="text/javascript" src="../Files/jquery.min.js"></script>
+<script type="text/javascript" src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../Files/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	function myFormatter(date) {
+		var year = date.getFullYear();
+		var month = date.getMonth() + 1;
+		var date = date.getDate();
+		return year + "/" + (month < 10 ? "0" + month : month) + "/"
+				+ (date < 10 ? "0" + date : date);
+	}
+
+	function select(date) {
+		$("#result").text(date);
+	}
+</script>
+</head>
+<body>
+	<h1>为日历指定格式</h1>
+	<div style="margin: 10px"></div>
+	<div class="easyui-panel" style="width: 500px; height: 300px; padding: 30px">
+		<div style="margin-bottom: 30px">
+			<input class="easyui-datebox" style="width: 100%" label='Default Date' labelPosition="top">
+		</div>
+		<div style="margin-bottom: 30px">
+			<input class="easyui-datebox" style="width: 100%" label='Custom Date' labelPosition="top"
+				data-options="formatter:myFormatter,onSelect:select">
+		</div>
+		<div id="margin:10px">
+			<span>Selected Date:</span>
+			<span id="result"></span>
+		</div>
+	</div>
+</body>
+</html>

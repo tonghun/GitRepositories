@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../Files/easyui.css">
+<link rel="stylesheet" type="text/css" href="../Files/icon.css">
+<link rel="stylesheet" type="text/css" href="../Files/demo.css">
+<script type="text/javascript" src="../Files/jquery.min.js"></script>
+<script type="text/javascript" src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../Files/easyui-lang-zh_CN.js"></script>
+<script>
+	//显示菜单必须配置的函数
+	$(function() {
+		$(document).bind('contextmenu', function(e) {
+			e.preventDefault();
+			$('#mm').menu('show', {
+				left : e.pageX,
+				top : e.pageY
+			});
+		});
+	});
+
+	function menuHandler(item) {
+		$("#p").prepend("<p> Click Item:" + item.name + "</p>")
+	}
+</script>
+</head>
+<body>
+	<h3>单击菜单项向面板中添加对应内容</h3>
+	<div style="margin-bottom: 10px"></div>
+	<div id="p" class="easyui-panel" style="width: 500px; height: 300px; padding: 20px"></div>
+	<div id="mm" class="easyui-menu" style="width: 100;" data-options="onClick:menuHandler">
+		<div data-options="name:'new',iconCls:'icon-save'">New</div>
+		<div>
+			<span>open</span>
+			<div>
+				<div data-options="name:'word'">
+					<b>word</b>
+				</div>
+				<div>excel</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

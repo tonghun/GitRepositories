@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>自定义消息框弹出位置</title>
+<link href="../Files/easyui.css" rel="stylesheet" type="text/css">
+<link href="../Files/icon.css" rel="stylesheet" type="text/css">
+<link href="../Files/demo.css" rel="stylesheet" type="text/css">
+<script src="../Files/jquery.min.js"></script>
+<script src="../Files/jquery.easyui.min.js"></script>
+<script type="text/javascript">
+	function show() {
+		$.messager.show({
+			title : 'My Title',
+			msg : 'Message will be closed after 4 seconds.',
+			showType : 'show',
+			style : {
+				right : '',
+				left : 0,
+				top : 0,
+				bottom : ''
+			}
+		});
+	}
+</script>
+</head>
+<body>
+	<div style="margin: 20px 0">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="show()">show</a>
+	</div>
+</body>
+</html>
