@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<root>
+	<c01 name01="value01" name02="value02">
+		c01节点的内容
+    <!--this is the comment of c01_element-->
+	</c01>
+	<c01 name01="value0201" name02="value0202">
+		c0101节点的内容
+    <!--this is the comment of c0101_element-->
+	</c01>
+	<c02><![CDATA[添加一个CDATA字段，其中含有可能被XML解析器视作标签的字符，如<>&'"]]></c02>
+</root>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<jdbc-connection>
+	<!--这是数据库连接四要素 -->
+	<driver-class>com.mysql.jdbc.Driver</driver-class>
+	<url>jdbc:mysql://127.0.0.1:3366/db_spring</url>
+	<user>root</user>
+	<password>123</password>
+</jdbc-connection>

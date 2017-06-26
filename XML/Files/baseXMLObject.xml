@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class id="myStudent" class="com.xml.beans.BaseXMLBean">
+	<id property="id" value="2000" />
+	<property name="name" value="baseXMLObject_name" />
+	<property name="age" value="20" />
+</class>

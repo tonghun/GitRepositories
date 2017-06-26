@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+
+	<book name="中国现代史" order="2" count="30">
+		<title lang="eng">Harry Potter</title>
+		<price>29.99</price>
+		<book name="第一个book节点下的子节点">第一个book节点下的子节点</book>
+		<count>20</count>
+	</book>
+
+	<book name="世界史" order="1" count="20">
+		<title lang="eng">Harry Potter</title>
+		<price>29.99</price>
+		<book name="第一个book节点下的子节点">第一个book节点下的子节点</book>
+		<count>20</count>
+	</book>
+
+	<book>
+		<title lang="eng">Learning XML</title>
+		<price>39.95</price>
+	</book>
+
+</bookstore>
