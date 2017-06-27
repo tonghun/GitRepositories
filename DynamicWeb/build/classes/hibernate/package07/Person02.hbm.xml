@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="hibernate.package07">
+	<class name="Person02" abstract="true">
+		<id name="id">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="string" />
+		<property name="sex" type="string" />
+		<property name="age" type="int" />
+		<union-subclass name="Student02" table="tb_student02">
+			<property name="school" />
+		</union-subclass>
+		<union-subclass name="Staffer02" table="tb_staffer02">
+			<property name="company" />
+		</union-subclass>
+	</class>
+</hibernate-mapping>

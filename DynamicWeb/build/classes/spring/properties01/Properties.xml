@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<!--Properties类型数据在配置文件中的配置 -->
+	<bean id="pop" class="spring.properties01.Prop">
+		<property name="pop">
+			<props>
+				<prop key="name01">name01的值</prop>
+				<prop key="name02">name02的值</prop>
+			</props>
+		</property>
+		<!-- Set类型数据的配置 -->
+		<property name="set">
+			<set>
+				<value>set01</value>
+				<value>set02</value>
+			</set>
+		</property>
+	</bean>
+</beans>

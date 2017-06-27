@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- 配置DataSource -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3366/db_database10" />
+		<property name="username" value="root" />
+		<property name="password" value="123" />
+	</bean>
+	<!-- 定义事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+	</bean>
+	<!-- 定义事务模板 -->
+	<bean id="transactionTemplate"
+		class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager">
+			<ref local="transactionManager" />
+		</property>
+		<property name="propagationBehaviorName">
+			<value>PROPAGATION_REQUIRED</value><!-- required是最常用的传播行为模式 -->
+		</property>
+		<property name="isolationLevelName">
+			<value>ISOLATION_DEFAULT</value>
+		</property>
+	</bean>
+
+	<bean id="transactionExample" class="dao.transactionTemplate02.TransactionExample">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="transactionManager">
+			<ref local="transactionManager" />
+		</property>
+		<property name="transactionTemplate">
+			<ref local="transactionTemplate" />
+		</property>
+	</bean>
+
+</beans>

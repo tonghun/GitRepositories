@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.package03.IDcard" table="tb_idcard">
+		<id name="id" column="id" type="int">
+			<generator class="foreign">
+				<param name="property">people</param>
+			</generator>
+		</id>
+		<property name="idcard_code" type="string">
+			<column name="idcard_code" />
+		</property>
+		<one-to-one name="people" class="hibernate.package03.People" />
+	</class>
+</hibernate-mapping>

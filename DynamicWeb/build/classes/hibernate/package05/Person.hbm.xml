@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="hibernate.package05">
+	<class name="Person" table="tb_person">
+		<id name="id" column="id" type="int">
+			<generator class="native" />
+		</id>
+		<discriminator column="type" type="string" />
+		<property name="name" type="string">
+			<column name="name" />
+		</property>
+		<property name="sex" type="string">
+			<column name="sex" />
+		</property>
+		<property name="age" type="int">
+			<column name="age" />
+		</property>
+		<subclass name="Student" discriminator-value="学生">
+			<property name="school" type="string">
+				<column name="school" />
+			</property>
+		</subclass>
+		<subclass name="Staffer" discriminator-value="职员">
+			<property name="company" type="string">
+				<column name="company" />
+			</property>
+		</subclass>
+	</class>
+</hibernate-mapping>

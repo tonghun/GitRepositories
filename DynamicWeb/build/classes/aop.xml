@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
+
+	<bean id="real01" class="aop.package02.RealSubject01"></bean>
+	<bean id="real02" class="aop.package02.RealSubject02"></bean>
+	<bean id="handler01" class="aop.package02.Handler01"></bean>
+	<bean id="handler02" class="aop.package02.Handler02"></bean>
+
+	<aop:config proxy-target-class="true">
+		<aop:aspect ref="handler01" order="2"><!-- ref用来指定切面所引用的方法 -->
+			<aop:pointcut id="p01"
+				expression="execution(* aop.package02.RealSubject*.*(..))"></aop:pointcut>
+			<aop:before method="printTime" pointcut-ref="p01"></aop:before>
+			<aop:after method="printTime" pointcut-ref="p01"></aop:after>
+		</aop:aspect>
+
+		<aop:aspect ref="handler02" order="1">
+			<aop:pointcut id="p02"
+				expression="execution(* aop.package02.RealSubject*.*(..))"></aop:pointcut>
+			<aop:before method="printContent" pointcut-ref="p02" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>

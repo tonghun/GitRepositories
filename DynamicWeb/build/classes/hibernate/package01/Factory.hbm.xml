@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.package01.Factory" table="tb_factory01">
+		<id name="factoryId" column="factoryId" type="int">
+			<generator class="native" />
+		</id>
+		<property name="factoryName" type="string">
+			<column name="factoryName" />
+		</property>
+	</class>
+</hibernate-mapping>
