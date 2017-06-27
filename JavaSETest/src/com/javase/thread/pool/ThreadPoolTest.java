@@ -1,34 +1,15 @@
 package com.javase.thread.pool;
 
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
-import org.junit.Test;
 
 public class ThreadPoolTest {
 
 	public static void main(String[] args) {
-		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
-		/*ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 200, TimeUnit.MILLISECONDS,
-				new ArrayBlockingQueue<Runnable>(10));*/
-
-		for (int i = 0; i < 100; i++) {
-			Mytask mytask = new Mytask(i);
-			executor.execute(mytask);
-			System.out.println("线程池中线程数目：" + executor.getPoolSize() + "，任务缓存队列中任务数目：" + executor.getQueue().size()
-					+ "，已执行完毕的任务数目" + executor.getCompletedTaskCount());
-		}
-
-	}
-
-	@Test
-	public void test01() {
-		// ThreadPoolExecutor executor = (ThreadPoolExecutor)
-		// Executors.newCachedThreadPool();
+		/*ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();*/
 		ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 200, TimeUnit.MILLISECONDS,
-				new ArrayBlockingQueue<Runnable>(5));
+				new ArrayBlockingQueue<Runnable>(10));
 
 		for (int i = 0; i < 100; i++) {
 			Mytask mytask = new Mytask(i);
@@ -36,6 +17,7 @@ public class ThreadPoolTest {
 			System.out.println("线程池中线程数目：" + executor.getPoolSize() + "，任务缓存队列中任务数目：" + executor.getQueue().size()
 					+ "，已执行完毕的任务数目" + executor.getCompletedTaskCount());
 		}
+
 	}
 
 }
