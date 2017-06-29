@@ -5,6 +5,7 @@
 /decorator/
 /el/
 /filter/
+/hibernate.cfg.xml
 /hibernate/
 /interceptor/
 /javaBean/
@@ -16,6 +17,10 @@
 /servletListener/
 /session/
 /spring/
+/springHibernate01.xml
+/struts.xml
 /struts2/
 /test/
+/transactionProxyFactoryBean01.xml
+/transactionTemplate02.xml
 /xml/
