@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 	arg02 = "arg02";
+	// 	var arg02;
+	function myFunction() {
+
+		var arg01 = "arg01";
+		arg02 = "arg02";
+		this.arg03 = "arg03";
+		// 		alert("arg----内部" + arg02);
+	}
+
+	/*  在函数未调用之前，内部定义的任何形式的变量都无法访问*/
+	alert("调用函数之前访问变量：---arg01---" + arg01);
+	alert("调用函数之前访问变量：---arg02---" + arg02);
+	alert("调用函数之前访问变量：---arg03---" + arg03);
+
+	var obj = new myFunction();
+	/* 调用函数之后，只用全局变量可以被直接访问 */
+	alert("调用函数之后访问变量：---arg01---" + arg01);
+	alert("调用函数之后访问变量：---arg02---" + arg02);
+	alert("调用函数之后访问变量：---arg03---" + arg03);
+
+	/* 通过对象访问变量只能访问那些被this修饰的变量 */
+	alert("通过对象访问变量：---arg01---" + obj.arg01);
+	alert("通过对象访问变量：---arg02---" + obj.arg02);
+	alert("通过对象访问变量：---arg03---" + obj.arg03);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>动态创建下拉列表</title>
+<script>
+	function addOption() {
+		// 		alert(1);
+		var content = document.getElementById("text01").value;
+		// 		var option = document.createElement("option");
+		// 		option.value = content + "值";
+		// 		option.innerHTML = content;
+
+		var option = new Option(content, content + "值");
+
+		var select = document.getElementById("select01");
+		select.add(option, null);
+	}
+
+	function showValue() {
+		var select = document.getElementById("select01");
+		var value = select.value;
+		alert(value);
+	}
+
+	function delOption() {
+		var select = document.getElementById("select01");
+		var selectedIndex = select.selectedIndex;
+		select.remove(selectedIndex);
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="text01" name="text01">
+	<button type="button" onclick="addOption()">添加</button>
+	<button type="button" onclick="delOption()">删除</button>
+	<br>
+	<select id="select01" onchange="showValue()" style="width: 10;background-color:#FF3300;"
+		size="5">
+		<option value="value01">value0101</option>
+	</select>
+	<h4>
+		<ol>
+			<li>JS为很多标记都提供了对象，创建与操作标记时优先考虑使用该对象；</li>
+			<li>获取下拉列表选中的值：选中的值即为select的value的值，通过select的value的值获取选中的值；</li>
+			<li>获取选中的项：select对象有一个属性selectedIndex用于设置与返回选中项的索引；</li>
+			<li>删除select中某项：首先获取该项的索引，然后通过select的方法remove(index)删除；</li>
+			<li>size属性：设置或者返回下拉列表的可见行数；</li>
+			<li>multiple:设置或者返回是否允许选择多个项目；</li>
+			<li>创建option对象的两种方式：
+				<ol>
+					<li>一般方式：documeng.createElement("option")；</li>
+					<li>Option对象构造器创建：new Option(label,value)。</li>
+				</ol>
+			</li>
+		</ol>
+	</h4>
+</body>
+</html>

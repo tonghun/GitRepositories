@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function clickX() {
+		alert("弹出警示框");
+		// 		return false;
+	}
+</script>
+</head>
+<body>
+	1.普通按钮与提交按钮被赋予同样的函数，单击之后，普通按钮执行函数中的操作，提交按钮没有执行该函数，只提交了表单数据;
+	<br>2.表单中的数据按照name=value的格式提交，如果没有为输入标记定义name属性的值，该标记的值不被提交。
+	<br>
+	<br>
+	<form name="form1" action="test01.html" target="_blank"
+		onsubmit="return clickX()">
+		<label for="text01">姓名:</label>
+		<!--没有name属性值的表单标记的值无法被提交，不符合提交格式  -->
+		<input type="text" id="text01" size="100" maxlength="10"><br>
+		<label for="text02">学号:</label> <input type="text" name="text02"
+			id="text02"> <br> <br>
+		<!-- readonly控件不可更改，可提交 -->
+		readonly:<input type="text" name="text03" id="text03" value="无法更改，可提交"
+			readonly><br>
+		<!-- disabled控件不可更改，不可提交 -->
+		disabled:<input type="text" name="text04" id="text04"
+			value="无法更改，无法提交" disabled> <br> <input type="button"
+			name="button01" value="普通按钮" onclick="clickX()">&nbsp;&nbsp;
+		<!--  系统已经为submit提交按钮预定了功能，不能再为其添加其他的功能与函数-->
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>

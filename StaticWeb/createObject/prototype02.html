@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prototype</title>
+<script>
+	function obj() {
+		this.name = "姓名";
+		this.show = function() {
+			alert(this.name);
+		}
+	}
+	obj.prototype.sex = "男";
+
+	var obj01 = new obj();
+	var obj02 = new obj();
+	obj01.age = "年龄";
+	obj01.show();
+	alert(obj01.sex);
+	alert(obj01.age);
+	alert("访问另一个对象单独添加的变量----" + obj02.age);
+</script>
+</head>
+<body>
+	<ol>
+		<li>prototype:向类（原型)中添加变量与函数，新添加的变量与函数为该类的所有实例所共享。</li>
+		<li>对象单独添加的变量或者方法只能由该对象使用。</li>
+	</ol>
+</body>
+</html>

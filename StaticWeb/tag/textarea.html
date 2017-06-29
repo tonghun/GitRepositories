@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>设置与获取&lt;textarea&gt;值的方法</title>
+<script>
+	function displayResult() {
+		var ta = document.getElementById("ta");
+		var defaultValue = ta.defaultValue;
+		var value = ta.value;
+		ta.value = "通过程序赋值";
+		alert("默认内容：" + defaultValue);
+		alert("当前内容：" + value);
+	}
+</script>
+</head>
+<body>
+	<textarea id="ta" cols="30" rows="10">defautValue是&lt;textarea&gt;的属性，不可用在标记中</textarea>
+	<br>
+	<input type="button" value="获取默认文本与当前文本" onclick="displayResult()">
+</body>
+</html>

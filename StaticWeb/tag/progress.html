@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>进度条</title>
+<script>
+	function create() {
+		var p01 = document.getElementById("p01");
+		var p = document.createElement("progress");
+		p.setAttribute("max", 100);
+		p.setAttribute("value", 22);
+		var p02 = document.createElement("br");
+		// 		p.nextSibling=p02;
+		p01.appendChild(p);
+		p01.appendChild(p02);
+	}
+</script>
+</head>
+<body>
+	<h2>进度条的属性max设置或者返回允许的最大值，value设置或者返回当前值</h2>
+	<p id="p01"></p>
+	<input type="button" value="创建进度条" onclick="create()">
+</body>
+</html>

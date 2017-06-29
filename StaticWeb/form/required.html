@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单输入标记input在HTML5中新增的比较重要的属性</title>
+</head>
+<body>
+	<h4>HTML为input表单输入标记新增了许多实用而强大的属性</h4>
+	<ol>
+		<li>requried:表单必须输入，如果不输入，将弹出提示信息，无法提交</li>
+		<li>form:赋以表单的id值，规定该标记从属的表单</li>
+		<li>formaction:规定了当表单提交时处理控件的文件的URL，只适用于属性为submit、image的标记，从而使得一处数据可以多出提交</li>
+		<li>multiple:允许向表单输入标记中输入多个值，主要用于同时向一个文本域中添加多个文件</li>
+		<li>pattern:使用正则表达式限定表单输入的数据格式</li>
+	</ol>
+	<form name="form01" id="form01" target="_blank" method="post"
+		enctype="multipart/form-data">
+		<label for="text01">请输入:</label><input type="text" id="text01"
+			name="text01" required> <br>
+		multiple属性允许向表单中输入多个值，主要用于file文件域，实现同时上传多个文件 ：<input type="file"
+			multiple><br> pattern设定要求的输入格式：<input type="text"
+			pattern="^d.*D$"><br> <input type="submit" value="提交">
+		<input type="submit" value="提交到另一个处理文件" formaction="other.html"
+			formtarget="_self">
+	</form>
+	<br> 表单之外的输入标记，可以通过form="id"的方式指明该标记从属的表单：
+	<input type="text" name="text02" id="text02" form="form01">
+</body>
+</html>

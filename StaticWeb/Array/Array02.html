@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array方法</title>
+</head>
+<script>
+	var arr01 = [ 1, "sfs", true ];/*  创建数组对象*/
+	alert("获取数组中的元素：" + arr01[1]);/* 访问数组中元素 */
+
+	var length01 = arr01.push("添加元素");/*向数组中添加数据 ,并返回新数组的长度*/
+	alert("数组最后一个元素：" + arr01[arr01.length - 1]);
+	alert("length01=" + length01);
+	var delElement = arr01.pop();/* 删除数组中的最后一个元素，并返回删除的元素 */
+
+	alert("获取数组中最后一个元素：" + arr01[arr01.length - 1])
+
+	var arr02 = new Array(3);
+	arr02.fill(1);
+
+	alert("填充数组arr02的元素：" + arr02[2]);
+
+	function m01(x) {
+		return x >= 0;/* 测试条件返回true或者false*/
+	}
+
+	var e01 = arr02.find(m01);/* 寻找满足测试条件的第一个元素，找到之后函数不再执行，没找到不同的浏览器返回结果不同，-1或者undefined */
+	alert("find测试条件：" + e01);
+
+	function add(x) {
+		return x + 3;
+	}
+	var arr03 = arr02.map(add);/* 对数组中的元素进行处理，返回一个新的数组 */
+	alert("arr03中的元素：" + arr03[1]);
+
+	var firstEle = arr03.shift();/* 删除数组中的第一个元素并返回 */
+	alert("shift删除数组中的第一个元素并返回：" + firstEle);
+
+	var countryName = [ "中国", "美国", "日本" ];
+	var joinRes = countryName.join("x");/* 用给定的字符连接数组中的每一个元素并返回一个字符串 */
+	alert("joinRes:" + joinRes);
+	var stringRes = countryName.toString();/* 用，连接数组中的每一个元素并返回一个字符串 */
+	alert("stringRes:" + stringRes);
+
+	var arr04 = [ 1, 2, 3, 4 ];
+	arr04.splice(1, 1, 8, 9, 10);
+	alert(arr04[3]);
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function constructor(param01, param02) {
+		alert(param01);
+	}
+	onload = constructor("param01的值");//调用时只指定一个参数，另外一个参数未指定
+</script>
+</head>
+<body>
+	如果function在定义函数时有多个参数，调用时可以只指定部分参数，但必须按照定义时的顺序，系统将自动匹配已指定的参数
+</body>
+</html>

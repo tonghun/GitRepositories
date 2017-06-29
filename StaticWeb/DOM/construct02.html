@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文档结构</title>
+<script>
+	function myFunction() {
+		// 		alert(1);
+		var txt = "";
+		var children = document.body.childNodes;
+		alert("childCount:" + children.length);
+
+		for (var i = 0; i < children.length; i++) {
+			txt += children[i].nodeType + "---" + children[i].nodeName + "---"
+					+ children[i].nodeValue + "\n";
+		}
+
+		alert(txt);
+		// 		var p01 = document.getElementById("p01");
+		// 		p01.innerHTML = txt;
+	}
+</script>
+</head>
+<body id="body" onload="myFunction()">
+	<button type="button" id="button01">按钮一</button>
+	<button type="button" id="button02">按钮二</button>
+	<h3 align="center">
+		在DOM中，元素指的是标记节点，标记节点的子节点由元素、文本节点、注释节点构成，属性不是元素的子节点。<br>空格也是文本节点，这里的空格指的是文件创建时存在的空格，不是页面最终显示时呈现的空格
+	</h3>
+</body>
+</html>

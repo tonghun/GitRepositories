@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>eval</title>
+<script>
+	alert(1);
+	var s = "var jsonString={\"name\":\"陈龙海\",	\"age\":20,\"sex\":\"男\"};";/* 由服务器发来的JSON字符串*/
+	var obj = eval(s);/*将JSON字符串解析成JS代码  */
+	alert(jsonString.name);
+
+	var s01 = "var a=1;";
+	eval(s01);
+	alert("由字符串解析而来：" + a);
+</script>
+</head>
+<body>
+	<font size="4"> <strong>1.eval是一个全局函数，不需要通过对象可以直接使用，作用是将一个字符串转化为JS代码，
+			主要用于将服务器发送来的包含数据的json字符串转化为json对象，以便提取其中的数据。<br> <br>
+			2.JSON：用作不同语言间数据交换的格式。<br> 基本格式： var
+			s="{\"key01\":\"value01\",\"key02\":\"value02\"};"，服务器将查询的数据以该格式发送给浏览器，<br>
+			浏览器在接收该字符串以后，通过eval函数将该字符串解析成JSON对象，然后获取其中的数据。<br> <br>
+			3.JSON与eval一起使用。
+	</strong>
+	</font>
+
+</body>
+</html>

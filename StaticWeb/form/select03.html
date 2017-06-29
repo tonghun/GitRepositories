@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+select {
+	width: 80px;
+}
+</style>
+<title>级联下拉菜单：一个主动，一个从动</title>
+<script>
+	var arr01 = [ "中国", "北京", "上海", "天津", "南京", "杭州", "郑州", "广州" ];
+	var arr02 = [ "美国", "纽约", "旧金山", "华盛顿", "洛杉矶", "芝加哥", "休斯顿" ];
+	var arr03 = [ "日本", "东京", "大阪", "福岛", "神户", "名古屋", "奈良" ];
+	var arr = [ arr01, arr02, arr03 ];
+
+	/* 标记加载完成后显示项 */
+	var index = 0;
+
+	function firstShow() {
+		/*获取对象  */
+		var actSelect = document.getElementById("actSelect");
+		var pasSelect = document.getElementById("pasSelect");
+
+		/*  添加主动项*/
+		for (var i = 0; i < arr.length; i++) {
+			var option = new Option(arr[i][0], i);
+			actSelect.options[actSelect.length] = option;
+
+			if (i === index)
+				option.selected = true;
+		}
+
+		/* 添加被动项 */
+		for (var i = 1; i < arr[index].length; i++) {
+			pasSelect.options[pasSelect.length] = new Option(arr[index][i],
+					arr[index][i]);
+		}
+	}
+
+	function show() {
+		var actSelect = document.getElementById("actSelect")
+		var value = actSelect.value;
+
+		var pasSelect = document.getElementById("pasSelect");
+
+		/* 删除被动下拉列表 */
+		document.body.removeChild(pasSelect);
+
+		/* 创建被动下拉列表 */
+		pasSelect = document.createElement("select");
+		pasSelect.id = "pasSelect";
+		document.body.appendChild(pasSelect);
+		for (var i = 1; i < arr[value].length; i++) {
+			var option = new Option(arr[value][i], arr[value][i]);
+			pasSelect.options[pasSelect.length] = option;
+		}
+	}
+</script>
+</head>
+<body onload="firstShow()" style="text-align: center;">
+	国家(主动者):
+	<select id="actSelect" onchange="show()"></select>城市(被动者):
+	<select id="pasSelect"></select>
+</body>
+</html>

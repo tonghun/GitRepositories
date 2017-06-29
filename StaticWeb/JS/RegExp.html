@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Regexp正则表达式</title>
+</head>
+<body>
+	<script>
+		alert(1);
+		var reg = /^\s*.*\s*$/;/* 正则表达式的一种创建方式，正则表达式的内容包含在//之中 */
+		var reg01 = new RegExp("^\\s*.*\\s*$");/* 使用正则表达式的完整表达，RegExp中的E大写 */
+
+		alert(2);
+		var s = "   字符串   ";
+		var isBoolean01 = reg.test(s);
+		var isBoolean02 = reg01.test(s);
+
+		alert(isBoolean01);
+		alert(isBoolean02);
+	</script>
+
+	<h4>正则表达式的两种建立方式</h4>
+	<blockquote>
+		1.直接使用字符创建：var reg=/正则表达式具体内容，由元字符构成；<br> 2.通过正则表达式对象创建：var
+		reg=new RegExp("正则表达式，由正则表达式的元字符的完整形式构成")。
+	</blockquote>
+</body>
+</html>

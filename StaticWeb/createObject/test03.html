@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>通过函数构造器创建对象</title>
+<script>
+	function myFunction() {
+
+	}
+
+	var obj = new myFunction();
+	obj.name = "name";
+	obj.show = function() {
+		alert(this.name);
+	};
+	obj.show();
+</script>
+</head>
+<body>
+	<h3 style="text-align: center;">利用函数构造器创建对象，把函数看做Java类，对象创建完成后，通过该对象向该对象中添加变量与方法。</h3>
+</body>
+</html>

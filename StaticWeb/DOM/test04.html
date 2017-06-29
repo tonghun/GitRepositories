@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+td {
+	background-color: #FF3300;
+	text-align: center;
+}
+</style>
+<title>多个对象操作同一个方法时的编程思想</title>
+<script>
+	function confirm() {
+		var time = new Date().getTime();
+		// 		alert(time);
+
+		var name = document.getElementById("name").value;
+		var name_td = document.createElement("td");
+		var del_td = document.createElement("td");
+		name_td.innerHTML = name;
+		del_td.innerHTML = "<input type=\"button\"value=\"删除\" onclick=\"delRow('"
+				+ time + "')\">";
+
+		var tr = document.createElement("tr");
+		tr.id = time;
+		tr.appendChild(name_td);
+		tr.appendChild(del_td);
+
+		var table = document.getElementById("table01");
+		table.appendChild(tr);
+	}
+
+	function delRow(time) {
+		// 	alert("delRow");
+		// 	alert(time);
+		var row = document.getElementById(time);
+		var table = document.getElementById("table01");
+		var index = row.rowIndex;
+		table.deleteRow(index);
+	}
+</script>
+</head>
+<body>
+	<label for="name">姓名：</label>
+	<input type="text" name="name" id="name">&nbsp;&nbsp;
+	<button type="button" onclick="confirm()">确认</button>
+	<table id="table01" border="1" style="width: 200px; float: center;">
+		<caption>学生信息表</caption>
+		<tr>
+			<th>姓名</th>
+			<th>删除</th>
+		</tr>
+	</table>
+	<h3>
+		通过本例说明一种编程思想：
+		<blockquote>
+			如果多个对象共用一个方法，为了识别对象，调用该方法时通常将一个唯一性标识作为参数传入方法中，<br>
+			方法根据该标识判断操作对象。通常去时间作为这个唯一性标识。
+		</blockquote>
+	</h3>
+</body>
+</html>

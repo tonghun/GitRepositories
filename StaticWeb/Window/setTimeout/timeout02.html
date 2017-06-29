@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>使用setTimeout使状态栏中文字自动消失</title>
+<script>
+	function clear() {
+		window.status = "";
+	}
+</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="在状态栏显示文字"
+			onclick="window.status='状态栏文字',setTimeout('clear()',3000)">
+	</form>
+</body>
+</html>

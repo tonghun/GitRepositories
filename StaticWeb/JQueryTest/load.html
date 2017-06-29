@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>load:从服务器加载数据，将数据放到指定的元素中</title>
+<script src="../JQuery/jquery-3.2.0.js"></script>
+<script>
+	$(document)
+			.ready(
+					function() {
+						$("#button01")
+								.click(
+										function() {
+											$("#span01")
+													.load(
+															"http://localhost:8080/DynamicWeb/JQueryServlet01?action=load",
+															{
+																name : "陈龙海",
+																age : 13
+															},
+															function(
+																	responseText,
+																	statusText) {
+																alert(responseText);
+																// 																alert(statusText);
+															})
+										});
+					});
+</script>
+</head>
+<body>
+	<span id="span01"></span>
+	<button type="button" id="button01">加载</button>
+</body>
+</html>

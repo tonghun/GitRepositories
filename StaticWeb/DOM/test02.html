@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document对象中封装了一个body对象与全部的表单对象</title>
+<script>
+	function add() {
+		// 		alert("add执行");
+
+		var name = form01.text01.value;
+		var content = form01.textarea01.value;
+
+		// 		alert(name);
+
+		var table01 = document.getElementById("table01");
+		var rows = table01.rows.length;
+		// 		alert("表格当前行数：" + rows);
+		var t = table01.insertRow(rows);
+
+		var cell01 = t.insertCell(0);
+		var cell02 = t.insertCell(1);
+		cell01.innerHTML = name;
+		cell02.innerHTML = content;
+
+		// 		document.body.appendChild(table01);
+	}
+
+	function deleteLastRow() {
+		var table01 = document.getElementById("table01");
+		var rows = table01.rows.length;
+		if (rows >= 2) {
+			table01.deleteRow(rows - 1);
+		}
+	}
+</script>
+</head>
+<body>
+	<table id="table01">
+		<tr>
+			<td>评论人</td>
+			<td>评论内容</td>
+		</tr>
+	</table>
+	<br>
+	<form name="form01">
+		&nbsp;评&nbsp;&nbsp;论&nbsp;&nbsp;人：<input type="text" name="text01"
+			size="65"><br> <br>评论内容：
+		<textarea name="textarea01" cols="50" rows="10"></textarea>
+		<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+			type="reset" value="重置">&nbsp;&nbsp;<input type="button"
+			value="添加" onclick="add()">&nbsp;&nbsp;<input type="button"
+			value="删除" onclick="deleteLastRow()">
+	</form>
+</body>
+</html>

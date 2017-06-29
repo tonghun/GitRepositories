@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div {
+	background-color: #FF6666;
+	border: 1px;
+	padding: 50px;
+	text-decoration: blink;
+}
+</style>
+</head>
+<body>
+	<div id="div01">
+		div独立标签上添加了一个onmousemove事件，当鼠标在该区域移动时，将随机生成一个随机数<br>
+		单击按钮后，生成不再生成随机数
+	</div>
+	<br>
+	<button type="button" id="button01">单击</button>
+	<p id="p01"></p>
+</body>
+<script>
+	function random() {
+		var p01 = document.getElementById("p01");
+		p01.innerHTML = Math.random();
+	}
+
+	function removeEvent() {
+		var div01 = document.getElementById("div01");
+		div01.removeEventListener("mousemove", random);
+	}
+	document.getElementById("div01").addEventListener("mousemove", random);
+	document.getElementById("button01").addEventListener("click", removeEvent);
+</script>
+</html>

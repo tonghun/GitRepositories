@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>子窗口</title>
+<script>
+	alert("deal01");
+	// 	alert(window.opener.indexArg);
+	opener.show();
+	// 	window.opener.show();
+</script>
+</head>
+<body>
+	<h3>
+		<span style="color: red;">这是deal.html页面。</span><br>
+		Window对象中有一个属性opener，返回通过open方法打开该窗口的窗口对象，获取该对象之后可以访问JS中的全局变量与函数
+	</h3>
+</body>
+</html>

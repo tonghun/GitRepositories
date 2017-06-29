@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	&lt;col&gt;标签与&lt;colgroup&gt;标签配合使用，分别为每一列定制样式。&lt;colgroup&gt;标签是&lt;col&gt;标签的父标签，
+	<br>在&lt;col&gt;标签内部通过span属性从左至右选择对应的列。
+	<table border="1">
+		<colgroup>
+			<col span="2" style="background-color: red;"></col>
+			<col style="background: yellow;"></col>
+		</colgroup>
+		<tr>
+			<th>第一列</th>
+			<th>第二列</th>
+			<th>第三列</th>
+		</tr>
+		<tr>
+			<td>01</td>
+			<td>02</td>
+			<td>03</td>
+		</tr>
+	</table>
+</body>
+</html>

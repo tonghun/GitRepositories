@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>slide</title>
+<script src="../JQuery/jquery-3.2.0.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#button01").click(function() {
+			$("#div01").slideDown(2000);
+		});
+		$("#button02").click(function() {
+			$("#div01").slideUp(2000);
+		});
+		$("#button03").click(function() {
+			$("#div01").slideToggle(2000);
+		});
+	});
+</script>
+</head>
+<body>
+	<button type="button" id="button01">向下滑动</button>
+	<div id="div01"
+		style="border: 1px solid red; width: 500px; height: 300px; background-color: red; display: none;"></div>
+	<button type="button" id="button02">向上滑动</button><button type="button"id="button03">向上/向下滑动</button>
+</body>
+</html>

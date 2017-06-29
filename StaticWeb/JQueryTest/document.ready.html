@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>将JavaScript代码放在$(document)之中，保证代码在页面完全加载后执行</title>
+<script src="../JQuery/jquery-3.2.0.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#button01").click(function() {
+			var content = $("#idName").val();
+			alert(content);
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="text" name="name" id="idName" class="cName">
+	<button type="button" title="按钮" id="button01">点击</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>在JS中表达式对象有两种创建形式</title>
+<script>
+	onload = function() {
+		var s = "1234a";
+
+		var regex01 = /^1\d{3}/;//一种创建正则表达式对象的方式
+		var matching01 = regex01.test(s);
+		alert("regex01----" + matching01);
+
+		var regex02 = new RegExp("^1\\d{3}$");
+		var matching02 = regex02.test(s);
+		alert("regex02----" + matching02)
+	}
+</script>
+</head>
+<body>在JS中有两种创建正则表达式对象的方式，对象调用的函数是test。
+</body>
+</html>

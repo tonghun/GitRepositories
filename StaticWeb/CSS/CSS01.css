@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+.one {
+	font-size: 60px;
+	color: red;
+}
+
+.two {
+	font-size: 60px;
+	color: yellow;
+}
+
+.three {
+	font-size: 90px;
+}

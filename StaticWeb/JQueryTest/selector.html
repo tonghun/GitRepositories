@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>各种选择器，即各种获取元素的方式</title>
+<script src="../JQuery/jquery-3.2.0.js"></script>
+<script>
+	$(document).ready(function() {
+		// 		alert(1);
+		/*  id选择器*/
+		// 	$("#p01").html("id选择器");
+		// 		$("#p01").css("background-color", "red");
+		/* clss选择器 */
+		// 		$(".c01").text("class选择器");
+		/*标记选择器  */
+		// 		$("p").text("标记选择器");
+		/*属性选择器  */
+		// 		$("[title]").text("属性选择器");
+		// 		$("[title='提示信息02']").text("带属性值的属性选择器");
+		// 		$("p.c01").text("标记与类别组合选择器");
+		// 		$("a[title='提示信息01']").text("标记与属性组合选择器");
+		// 	$("ul li:first").text("第一个列表的第一项");
+		// 		$("ul li:first-child").text("每一个列表的第一项");
+		// 		$("ul li:eq(1)").text("获取第一个列表指定索引位置的项");
+		/*  创建元素*/
+		// 		var node = $("<li>0203</li>");
+		/* 向元素尾部追加节点 */
+		// 		$("ul").eq(1).append(node);
+		// 	var insertNode = $("<li>插入的节点</li>");
+		// 		var refNode = $("ul li:eq(0)");
+		// 		insertNode.insertAfter(refNode);
+		// 		$("ul li:eq(1)").remove();
+		// 		var id = $("#p01").attr("id");/* 获取属性 */
+		// 		alert(id);
+		// 				$("#p01").attr("title", "id=p01");//存在时修改，不存在时添加
+		// 		$("#p01").removeAttr("title");
+	});
+</script>
+</head>
+<body>
+	<p id="p01" class="c01" title="p01">id="p01"class="c01"</p>
+	<p id="p02" class="c01">id="p02"class="c01"</p>
+	<p id="p03" class="c02" title="提示信息01">id="p03"class="c02"</p>
+	<a id="a01" class="c01" title="提示信息01">id="a01"class="c01"</a>
+	<br>
+	<a id="a02" class="c01" title="提示信息02">id="a02"class="c01"</a>
+	<br>
+	<br>第一个列表：
+	<ul>
+		<li>0101</li>
+		<li>0102</li>
+	</ul>
+	<br>第二个列表：
+	<ul>
+		<li>0201</li>
+		<li>0202</li>
+	</ul>
+</body>
+</html>

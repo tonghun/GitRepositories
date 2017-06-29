@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta>
+<title>演示Window中的方法setInternal</title>
+<script>
+	var t02 = 5;
+	function method01() {
+		// 		var t01 = Math.random();
+		// 		t.innerHTML = t01;//在标记间插入HTML代码
+		t.innerHTML+ = t02;
+		t02--;
+		setInterval("method01()", 1000);
+	}
+</script>
+</head>
+<body onload="method01()" id="t">乱码检测
+</body>
+</html>

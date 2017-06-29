@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>显示提示信息</title>
+<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+input {
+	width: 100px;
+	height: 20px;
+	border: 1px solid #ccc;
+}
+</style>
+</head>
+
+
+<body>
+	<script>
+		function tips(id, str) {
+			var l = document.getElementById(id).offsetLeft + 120;
+			var t = document.getElementById(id).offsetTop;
+			document.getElementById("tips").innerHTML = "提示：" + str;
+			document.getElementById("tips").style.left = l + "px";
+			document.getElementById("tips").style.top = t + "px";
+			document.getElementById("tips").style.display = "";
+		}
+		function outtips() {
+			document.getElementById("tips").style.display = 'none';
+		}
+	</script>
+	<div id="tips"
+		style="position: absolute; border: 1px solid #ccc; padding: 0px 3px; color: #f00; display: none; height: 20px; line-height: 20px; background: #fcfcfc"></div>
+	<br /> 姓名：
+	<input type="text" id="username"
+		onfocus="tips('username','姓名长度最多16个字符')" onblur="outtips()" />
+	<br /> 密码：
+	<input type="password" id="password"
+		onfocus="tips('password','密码长度必须在3-18位之间')" onblur="outtips()" />
+</body>
+</html>

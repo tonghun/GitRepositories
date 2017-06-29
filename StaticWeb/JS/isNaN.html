@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>isNaN函数用来判读是否是非数字</title>
+<script>
+	function checkNaN(form) {
+		with (form) {
+			if (isNaN(text01.value))
+				alert("输入无效，请重新输入");
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="form" onclick="checkNaN(this)">
+		<input name="text01" type="text"><input name="button01"
+			type="button" value="判断">
+	</form>
+	<br>
+	<div style="font-size: 20px; color: red">
+		with(object):用来引用对象，引用之后可以直接调用该对象的变量与函数； <br>
+		isNaN(content):用来判断content是不是非数字；
+	</div>
+</body>
+</html>

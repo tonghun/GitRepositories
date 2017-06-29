@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery事件</title>
+<script src="../JQuery/jquery-3.2.1.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#text01").focus(function() {
+			alert("获取光标事件");
+		});
+		$("#button01").dblclick(function() {
+			alert("按钮被双击");
+		})
+	});
+</script>
+</head>
+<body>
+	<input type="text" id="text01" name="text01">
+	<button type="button" id="button01">提交</button>
+</body>
+</html>

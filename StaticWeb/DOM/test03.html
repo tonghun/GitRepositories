@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>逐级向上添加的方式对象的创建与添加</title>
+<script>
+	// 	alert("script开始执行");
+	// 	var table01 = document.getElementById("table01");//在JavaScript中定义一个全局变量，如果该变量的值是通过取值获得的，那么该变量无法使用，使用该变量将导致程序在使用处终止执行
+
+	function add() {
+		// 	alert("add开始执行");
+		// 	alert("table01:" + table01.nodeName);
+		// 	alert("后");
+
+		var name = form01.text01.value;
+		var content = form01.textarea01.value;
+
+		var nameNode = document.createTextNode(name);
+		var contentNode = document.createTextNode(content);
+
+		var tdName = document.createElement("td");
+		var tdContent = document.createElement("td");
+		tdName.appendChild(nameNode);
+		tdContent.appendChild(contentNode);
+
+		var trNode = document.createElement("tr");
+		trNode.appendChild(tdName);
+		trNode.appendChild(tdContent);
+
+		var table01 = document.getElementById("table01");
+		table01.appendChild(trNode);
+	}
+
+	function deleteLastRow() {
+		var table01 = document.getElementById("table01");
+		if (table01.rows.length > 1) {
+			table01.deleteRow(table01.rows.length - 1);
+		}
+	}
+</script>
+</head>
+<body>
+	<table id="table01">
+		<tr>
+			<td>评论人</td>
+			<td>评论内容</td>
+		</tr>
+	</table>
+	<br>
+	<form name="form01">
+		&nbsp;评&nbsp;&nbsp;论&nbsp;&nbsp;人：<input type="text" name="text01"
+			size="65"><br> <br>评论内容：
+		<textarea name="textarea01" cols="50" rows="10"></textarea>
+		<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input
+			type="reset" value="重置">&nbsp;&nbsp;<input type="button"
+			value="添加" onclick="add()">&nbsp;&nbsp;<input type="button"
+			value="删除" onclick="deleteLastRow()">
+	</form>
+</body>
+</html>

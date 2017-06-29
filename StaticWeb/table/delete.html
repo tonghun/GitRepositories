@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>&lt;table&gt;相关操作方法</title>
+<script>
+	// 	alert("script执行");
+	// 	var table01 = document.getElementById("table01");
+
+	function deleteRows() {
+		alert("delete开始执行");
+		var table01 = document.getElementById("table01");
+		if (table01.rows.length > 2) {
+			table01.deleteRow(table01.rows.length - 2);
+		}
+	}
+
+	function addRow() {
+		alert("addRows执行");
+		var table01 = document.getElementById("table01");
+		if (table01.rows.length >= 2) {
+			var t = table01.insertRow(table01.rows.length - 1);
+			var cell01 = t.insertCell(0);
+			var cell02 = t.insertCell(1);
+			cell01.innerHTML = "cell" + (table01.rows.length - 2);
+			cell02.innerHTML = "cell" + (table01.rows.length - 2);
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="form01">
+		<table border="1" id="table01">
+			<tr>
+				<td bgcolor="red">第一列</td>
+				<td bgcolor="red">第二列</td>
+			</tr>
+			<tr>
+				<td>0101</td>
+				<td>0102</td>
+			</tr>
+			<tr>
+				<td>0201</td>
+				<td>0202</td>
+			</tr>
+			<tr>
+				<td>0301</td>
+				<td>0302</td>
+			</tr>
+			<tr>
+				<td align="center"><input type="button" value="删除最后一行"
+					onclick="deleteRows()" /></td>
+				<td align="center"><input type="button" value="增加一行"
+					onclick="addRow()" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

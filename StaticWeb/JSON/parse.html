@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>parse将从服务器端接收的字符串解析成JSON对象</title>
+</head>
+<body>
+	<p id="p01"></p>
+	<ol>
+		<li>parse方法：将从服务器接收的字符串解析成JSON对象，该方法是JSON的一个专有方法，通过JSON调用。</li>
+	</ol>
+</body>
+<script>
+	var p01 = document.getElementById("p01");
+	var s = "{\"name\":\"姓名\",\"age\":\"年龄\"}";
+	var obj = JSON.parse(s);
+	p01.innerHTML = obj.name;
+</script>
+</html>

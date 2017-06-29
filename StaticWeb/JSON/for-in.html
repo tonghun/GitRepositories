@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="p01" style="font-size: 18px;">
+		使用for-in来循环对象的属性:<br>
+	</p>
+	<ol style="font-size: 20px;">
+		<li>HTML文件从上向下执行，如果执行到JS代码时所调用的HTML对象尚未执行，那么JS也无法执行，为了避免出现这种因执行顺序导致的JS无法执行，将JS放到HTML尾部，待页面布局加载完毕后执行。</li>
+		<li>for-in:用来遍历对象的属性，不可以用来遍历数组。</li>
+	</ol>
+</body>
+<script>
+	/*  JSON对象*/
+	var obj = {
+		"name" : "晓明",
+		"age" : 18,
+		"judge" : true,
+		"obj01" : null
+	};
+
+	/*遍历对象属性 */
+	var p01 = document.getElementById("p01");
+	for ( var x in obj) {
+		p01.innerHTML += x + "<br>";
+	}
+
+	p01.innerHTML += "使用delete删除对象属性之后：" + "<br>";
+	/*  删除对象属性*/
+	delete obj.obj01;
+	for ( var x in obj) {
+		p01.innerHTML += x + "<br>";
+	}
+	p01.innerHTML += "<span style='color:red;'>" + "此处属性已删除" + "<span><br>"
+
+	/* 增加属性 */
+	obj.add = "add";
+	p01.innerHTML += "增加属性（在JS中可以对JSON对象的属性进行增、删、查、改）" + "<br>";
+	for ( var x in obj) {
+		p01.innerHTML += x + "<br>";
+	}
+</script>
+</html>

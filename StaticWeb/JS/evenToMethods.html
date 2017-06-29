@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>在JavaScript中一个事件可以对应多个方法</title>
+<script>
+	function m01() {
+		alert("m01");
+	}
+
+	function m02() {
+		alert("m02");
+	}
+</script>
+</head>
+<body onload="m01(),m02()">
+</body>
+</html>

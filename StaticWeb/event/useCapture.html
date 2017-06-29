@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div {
+	background-color: coral;
+	border: 1px solid;
+	padding: 30px;
+}
+</style>
+</head>
+<body>
+	<h4>
+		分层结构的多个对象添加了同一类型的事件时，存在一个先后触发的问题，JS提供了两种方案：冒泡，捕获。 <br>
+		冒泡：从里向外先后执行；捕获：从外向里先后执行。默认false，冒泡
+	</h4>
+	<div id="div01">
+		<p id="p01">采用冒泡：从里向外执行</p>
+	</div>
+	<br>
+	<div id="div02">
+		<p id="p02">采用捕获：从外向里之星</p>
+	</div>
+</body>
+<script>
+	document.getElementById("div01").addEventListener("click", function() {
+		alert("单击了div01")
+	}, false);
+	document.getElementById("p01").addEventListener("click", function() {
+		alert("单击了p01")
+	}, false);
+	document.getElementById("div02").addEventListener("click", function() {
+		alert("单击了div02")
+	}, true);
+	document.getElementById("p02").addEventListener("click", function() {
+		alert("单击了p02")
+	}, true);
+</script>
+</html>

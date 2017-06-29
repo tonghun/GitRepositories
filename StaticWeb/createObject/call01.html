@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function Obj01() {
+		this.name = "Obj01 name";
+		this.show = function() {
+			alert(this.name);
+		}
+	}
+
+	function Obj02() {
+		this.name = "Obj02 name";
+	}
+
+	var obj01 = new Obj01();
+	var obj02 = new Obj02();
+	obj01.show.call(obj02);/*  弹出的是obj02的变量值*/
+</script>
+</head>
+<body>
+	<h3 style="text-align: center;">call方法：调用一个对象的一个方法，以参数对象替换该对象，在参数对象的环境下执行该方法，相当于参数对象继承了该方法。</h3>
+</body>
+</html>

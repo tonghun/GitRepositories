@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<h3>
+			radio在名称相同的情况下才作为一组来处理，才同时只能选中一个； <br>radio旁边的文字只起描述作用，不是选中之后发送给服务器的值，发送给服务器的参数需要通过value专门设定
+		</h3>
+		<br>两个名称不相同的情况，可以同时选中多个： <label for="man">男</label> <input
+			type="radio" name="man" id="man" value="man"><label
+			for="female">女</label><input type="radio" name="female" id="female"
+			value="female"> <br>两个名称相同的情况，作为一组处理，同时只能选中一个： <label
+			for="man">男</label> <input type="radio" name="sex" id="man"
+			value="man"><label for="female">女</label><input type="radio"
+			name="sex" id="female" value="female" checked>
+	</form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<script language="javascript">
+	/**定义一个animal类*/
+	function Animal() {
+		this.name = "Animal";
+		this.showName = function() {
+			alert(this.name);
+		}
+	}
+	/**定义一个Cat类*/
+	function Cat() {
+		this.name = "Cat";
+	}
+
+	/**创建两个类对象*/
+	var animal = new Animal();
+	var cat = new Cat();
+
+	//通过call或apply方法，将原本属于Animal对象的showName()方法交给当前对象cat来使用了。
+	//输入结果为"Cat"
+	animal.showName.call(cat, "dog");
+	//animal.showName.apply(cat,[]);
+</script>
+</head>
+<body>1..method.call(obj02[,arg1...])相当于obj02继承了obj01的方法method，
+	官方解释：调用一个对象的一个方法（obj01.method）,用另外一个对象（obj02）替换当前对象（obj01），
+	相当于在obj02的环境中运行method; 2.任何一个函数都是Function对象的实例；
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>全选与取消全选</title>
+<script>
+	function allOrNone() {
+		// 		alert("开始");
+		var allBox = document.getElementById("checkAll");
+		var status = allBox.checked;
+		var list = document.getElementsByName("list");
+
+		var span01 = document.getElementById("span01");
+
+		// 		alert("2");
+		if (status) {
+			// 			alert(true);
+			for (var i = 0; i < list.length; i++) {
+				list[i].checked = true;
+			}
+			span01.innerHTML = "取消全选";
+		} else {
+			// 			alert(false);
+			for (var i = 0; i < list.length; i++) {
+				list[i].checked = false;
+			}
+			span01.innerHTML = "全选";
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="checkbox" name="checkAll" id="checkAll"
+		onclick="allOrNone()">
+	<span id="span01">全选</span>
+	<br>
+	<input type="checkbox" name="list" id="id01" value="id01">选项一
+	<br>
+	<input type="checkbox" name="list" id="id02" value="id02">选项二
+	<br>
+	<input type="checkbox" name="list" id="id03" value="id03">选项三
+	<br>
+	<input type="checkbox" name="list" id="id04" value="id04">选项四
+</body>
+</html>

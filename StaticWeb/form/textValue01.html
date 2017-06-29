@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>为文本域textarea赋值，文本域标签中间的内容即为文本域显示的内容</title>
+<script>
+	function give() {
+		alert("give");
+		form01.content.value = "123";
+	}
+</script>
+
+</head>
+<body onload="give()">
+	<form name="form01">
+		<input type="text" value="i" />
+		<textarea name="content">content</textarea>
+	</form>
+</body>
+</html>

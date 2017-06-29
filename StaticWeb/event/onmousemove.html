@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试onmousemove/onmouseout</title>
+<script>
+	function bigImg(x) {
+		x.style.height = "180px";
+		x.style.width = "180px";
+		alert("变大");
+	}
+
+	function normalImg(x) {
+		x.style.height = "100px";
+		x.style.width = "100px";
+		alert("恢复");
+	}
+
+	function overMouse() {
+		alert("在对象上移动鼠标触发");
+	}
+</script>
+</head>
+<body>
+	<img src="../images/1.jpg" alt="图片无法显示时显示的内容"
+		onmousemove="bigImg(this)" onmouseout="normalImg(this)"
+		onmouseover="overMouse()" />
+	<p>onmousemove:当鼠标在对象上方移动时执行的操作</p>
+	<p>onmouseout:用于指定当鼠标离开对象时，执行的操作</p>
+</body>
+</html>

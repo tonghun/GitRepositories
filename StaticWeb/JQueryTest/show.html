@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../JQuery/jquery-3.2.0.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#button01").click(function() {
+			$("#span01").hide("slow");
+		});
+		$("#button02").click(function() {
+			$("#span01").show(5000, callback());
+		});
+	});
+
+	function callback() {
+		alert("显示完毕");
+	}
+</script>
+</head>
+<body>
+	<span id="span01">隐藏/显示</span>
+	<br>
+	<button type="button" id="button01">隐藏</button>
+	<button type="button" id="button02">显示</button>
+</body>
+</html>

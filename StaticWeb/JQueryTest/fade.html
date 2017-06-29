@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fade</title>
+<script src="../JQuery/jquery-3.2.0.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#button01").click(function() {
+			$("#p01").fadeToggle(2000);
+		});
+		$("#button02").click(function() {
+			$("#p02").fadeTo("slow", 0.3);
+		});
+	});
+</script>
+</head>
+<body>
+	<p id="p01">淡入</p>
+	<button type="button" id="button01" style="width: 100px;">淡入</button>
+	<br>
+	<p id="p02">修改透明度</p>
+	<button type="button" id="button02">修改透明度</button>
+</body>
+</html>

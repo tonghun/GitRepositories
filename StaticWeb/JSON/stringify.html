@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>stringify:将JS对象转化为字符串，发给服务器</title>
+</head>
+<body>
+	<h3>将JS对象转化为字符串</h3>
+	<p id="p"></p>
+	<br>
+	<ol>
+		<li>将JS对象转化为字符串发给服务器，主要通过Ajax发送。</li>
+		<li>如果被解析的对象中含有函数，该函数的key/value均被删除。</li>
+	</ol>
+</body>
+<script>
+	var obj = {
+		"name" : "name value",
+		"age" : "age value"
+	};
+	var s = JSON.stringify(obj);
+	document.getElementById("p").innerHTML = s;
+</script>
+</html>
