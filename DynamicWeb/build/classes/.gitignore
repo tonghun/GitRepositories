@@ -1,3 +1,13 @@
+/JdbcTemplate01.xml
+/aop.xml
+/applicationContext.xml
+/ehcache.xml
+/hibernate.cfg.xml
+/hibernate/
+/interceptor/
+/spring/
+/springHibernate01.xml
+/struts.xml
 /ajax/
 /aop/
 /cookie/
@@ -5,9 +15,6 @@
 /decorator/
 /el/
 /filter/
-/hibernate.cfg.xml
-/hibernate/
-/interceptor/
 /javaBean/
 /jdbc/
 /jquery/
@@ -16,9 +23,6 @@
 /servlet/
 /servletListener/
 /session/
-/spring/
-/springHibernate01.xml
-/struts.xml
 /struts2/
 /test/
 /transactionProxyFactoryBean01.xml
