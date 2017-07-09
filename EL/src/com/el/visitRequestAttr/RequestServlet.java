@@ -24,7 +24,7 @@ public class RequestServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		student = new Student("ÕÅÈý", 30);
+		student = new Student("å¼ ä¸‰", 30);
 		request.getRequestDispatcher("/WEB-INF/visitPrePage/deal.jsp").forward(request, response);
 	}
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>来自属性文件的数据库连接四要素</comment>
+<entry key="jdbc.url">jdbc:mysql://localhost:3366/tb_temp</entry>
+<entry key="serverTimezone">UTC</entry>
+<entry key="jdbc.username">root</entry>
+<entry key="jdbc.driver">com.mysql.cj.jdbc.Driver</entry>
+<entry key="jdbc.password">456</entry>
+</properties>

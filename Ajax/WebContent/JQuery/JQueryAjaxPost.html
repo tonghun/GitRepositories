@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery对Ajax进行了封装了，简化了Ajax操作</title>
+<script src="../Files/jquery-3.2.1.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#username").blur(function() {
+			var nameValue = $("#username").val();
+			alert(nameValue);
+			$.post("http://localhost:8080/Ajax/jQueryAjaxServlet", {
+				name : nameValue
+			}, function(data, status) {
+				alert(status);
+				if (data == "false")
+					$("#tip").html("用户名已存在");
+				else
+					$("#tip").html("用户名可用");
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div style="text-align: center;">
+		用户名: <input type="text" name="name" id="username"><span id="tip"></span>
+	</div>
+</body>
+</html>

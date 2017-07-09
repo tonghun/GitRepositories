@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>隐藏对象</title>
+<script>
+	function cover01() {
+		document.all.h01.style.display = "none";
+	}
+	function cover02() {
+		document.all.h01.style.visibility = "hidden";
+	}
+	function cover03() {
+		document.all.h01.style.display = "block";
+		document.all.h01.style.visibility = "visible";
+	}
+</script>
+</head>
+<body>
+	<h2 id="h01">测试内容：将要被隐藏的对象</h2>
+	<button type="button" onclick="cover01()">隐藏(对象被隐藏后不占空间)</button>
+	<button type="button" onclick="cover02()">隐藏(对象被隐藏后占空间)</button>
+	<button type="button" onclick="cover03()">显示</button>
+</body>
+</html>

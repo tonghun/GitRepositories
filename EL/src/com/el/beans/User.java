@@ -1,4 +1,4 @@
-package com.el.javabean;
+package com.el.beans;
 
 public class User {
 
@@ -22,7 +22,7 @@ public class User {
 	}
 
 	public String getTemp() {
-		return "ÊôĞÔtemp";
+		return "temp";
 	}
 
 	public String ps01 = "ps01";

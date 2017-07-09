@@ -6,15 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- * 1.���񽫶����ݿ�Ĳ�������洢�ڻ����У����ڻ������ݽ��в������������е�����ֱ�Ӵӻ����л�ȡ��
- * �ύʱͬ�������ݿ⣬�ع���������档
- * 2.��JDBC�У������ڽ���֮ǰ�������ڲ��Ĳ������Ѿ�ִ����ϣ�����ִ��ʱ�����ڴ��ִ�У�ֻ����
- * �������ʱ����ִ�н����ͬ�������ݿ⣬������ա�
- * 
- * @author tonghuo
- *
- */
 public class TransactionTest {
 
 	public static Connection getConnection() {
