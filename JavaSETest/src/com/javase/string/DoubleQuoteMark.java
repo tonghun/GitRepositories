@@ -1,15 +1,9 @@
 package com.javase.string;
 
-/**
- * ��˫�����ڲ�ʹ��˫���ţ�����Ϊÿһ���ڲ���˫�������ת���ַ���\����
- * 
- * @author tonghuo
- *
- */
 public class DoubleQuoteMark {
 	public static void main(String[] args) {
-		String s01 = "\"�й�\"";
-		String s02 = "'�й�'";
+		String s01 = "\121\"";
+		String s02 = "'12121'";
 		System.out.println(s01);
 		System.out.println(s02);
 

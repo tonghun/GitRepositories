@@ -1,3 +1,4 @@
+/JdbcTemplate01.xml
 /ajax/
 /aop.xml
 /aop/
@@ -24,6 +25,4 @@
 /struts.xml
 /struts2/
 /test/
-/transactionProxyFactoryBean01.xml
-/transactionTemplate02.xml
 /xml/
