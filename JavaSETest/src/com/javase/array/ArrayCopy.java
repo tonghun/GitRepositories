@@ -1,7 +1,5 @@
 package com.javase.array;
 
-import java.util.Arrays;
-
 import org.junit.Test;
 
 /**

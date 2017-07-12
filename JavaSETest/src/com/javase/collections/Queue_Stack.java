@@ -1,4 +1,4 @@
-package com.javase.temp;
+package com.javase.collections;
 
 import java.util.Stack;
 
@@ -8,12 +8,12 @@ import java.util.Stack;
  * @author tonghuo
  *
  */
-public class Queue_stack {
+public class Queue_Stack {
 	Stack<Integer> stack1 = new Stack<Integer>();
 	Stack<Integer> stack2 = new Stack<Integer>();
 
 	public static void main(String[] args) {
-		Queue_stack qs = new Queue_stack();
+		Queue_Stack qs = new Queue_Stack();
 
 		qs.push(1);
 		// System.out.println(qs.pop());

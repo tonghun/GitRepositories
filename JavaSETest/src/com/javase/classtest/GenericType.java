@@ -1,5 +1,8 @@
 package com.javase.classtest;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 
 /**
@@ -8,7 +11,7 @@ import org.junit.Test;
  * @author tonghuo
  *
  */
-public class GenericType {
+public class GenericType<T> {
 
 	public <T, V> void doSome01(T a, V b) {
 		System.out.println("a=" + a + "----" + "b=" + b);
@@ -16,6 +19,20 @@ public class GenericType {
 
 	public static <T, V> void doSome02(T a, V b) {
 		System.out.println("a=" + a + "----" + "b=" + b);
+	}
+
+	public void doSome(GenericType<? extends Number> obj) {
+
+	}
+
+	/**
+	 * 泛型擦除
+	 */
+	@Test
+	public void testErasure() {
+		List<String> strList = new ArrayList<String>();
+		List<Integer> intList = new ArrayList<Integer>();
+		System.out.println(strList.getClass() == intList.getClass());
 	}
 
 	@Test

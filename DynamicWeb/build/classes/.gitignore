@@ -1,12 +1,8 @@
-/JdbcTemplate01.xml
 /ajax/
-/aop.xml
 /aop/
-/applicationContext.xml
 /cookie/
 /dao/
 /decorator/
-/ehcache.xml
 /el/
 /filter/
 /hibernate.cfg.xml
@@ -25,4 +21,6 @@
 /struts.xml
 /struts2/
 /test/
+/transactionProxyFactoryBean01.xml
+/transactionTemplate02.xml
 /xml/
