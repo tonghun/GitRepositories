@@ -19,9 +19,9 @@ public class ArrayToList {
 	 */
 	@Test
 	public void testTransformToCollection() {
-		Integer[] arr = new Integer[] { new Integer(1), new Integer(2) };
-		List<Integer> IntList = new ArrayList<Integer>();
-		Collections.addAll(IntList, arr);
+		Integer[] arr = new Integer[] { new Integer(1), new Integer(2) };// 创建一个数组
+		List<Integer> IntList = new ArrayList<Integer>();// 创建一个集合
+		Collections.addAll(IntList, arr);// 将数组中的元素添加到集合中
 	}
 
 	/**

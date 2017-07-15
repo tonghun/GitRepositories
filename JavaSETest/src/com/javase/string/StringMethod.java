@@ -35,4 +35,15 @@ public class StringMethod {
 			System.out.println(x);
 	}
 
+	/**
+	 * 使用平台默认的字符集对字符串进行编码
+	 */
+	@Test
+	public void testGetBytes() {
+		String str01 = new String("abc中");
+		byte[] buf = str01.getBytes();
+		for (byte x : buf)
+			System.out.println(x);
+	}
+
 }

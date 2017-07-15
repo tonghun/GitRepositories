@@ -11,6 +11,7 @@ import org.junit.Test;
  * @author tonghuo
  *
  */
+@SuppressWarnings("hiding")
 public class GenericType<T> {
 
 	public <T, V> void doSome01(T a, V b) {

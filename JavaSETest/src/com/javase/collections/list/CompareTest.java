@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Vector;
 
 import org.junit.Test;
 
@@ -123,8 +122,8 @@ public class CompareTest {
 
 	@Test
 	public void testIterator() {
-       HashSet<String> sets = new HashSet<String>();
-       sets.iterator();
-  	}
+		HashSet<String> sets = new HashSet<String>();
+		sets.iterator();
+	}
 
 }
