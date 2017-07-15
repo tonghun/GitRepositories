@@ -1,3 +1,8 @@
+/JdbcTemplate01.xml
+/aop.xml
+/applicationContext.xml
+/ehcache.xml
+/hibernate/
 /ajax/
 /aop/
 /cookie/
@@ -6,7 +11,6 @@
 /el/
 /filter/
 /hibernate.cfg.xml
-/hibernate/
 /interceptor/
 /javaBean/
 /jdbc/
