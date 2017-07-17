@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+	width: 49%;
+	height: 200px;
+	border: 1px solid red;
+}
+
+li {
+	list-style-type: none;
+}
+</style>
+<meta charset="UTF-8">
+<script type="text/javascript" src="../Files/jquery-3.2.1.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#div02").load("right.html?nocache=" + new Date().getTime());
+	})
+</script>
+<title>div+float建立多列</title>
+</head>
+<body>
+	<div id="div01" style="float: left;">
+		div01<br> &lt;div&gt;默认情况下占据一行，采用CSS的浮动属性float可以将多个&lt;div&gt;放在同一行。
+		<ul>
+			<li>第一行</li>
+			<li>第二行</li>
+			<li>第三行</li>
+			<li>第四行</li>
+			<li>第五行</li>
+		</ul>
+		<!-- 		<button id="button01" type="button">加载内容到div02</button> -->
+	</div>
+	<div id="div02" style="float: right; overflow: auto;"></div>
+</body>
+</html>
